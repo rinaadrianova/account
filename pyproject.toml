@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "account-transaction"
+version = "0.1.0"
+description = "Код для виджета \"Операции по счетам\""
+authors = ["Adrianova Rina <107701817+rinaadrianova@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "account_transaction"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
