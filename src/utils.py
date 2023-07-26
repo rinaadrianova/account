@@ -24,6 +24,7 @@ def transaction_cards(card_number=None):
     в отформатированном виде
     :param card_number:
     """
+
     if card_number is None:
         return 'Не указано'
     else:
@@ -43,6 +44,7 @@ def get_last_five(data):
     :param data:
     :return:
     """
+
     count = 0
     last_five = []
     while count < 5:
