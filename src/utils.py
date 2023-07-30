@@ -35,9 +35,7 @@ def transaction_cards(card_number=None):
 
 def get_last_five(data):
     """
-    Собирает список из последних пяти транзакций
-    :param data:
-    :return:
+    Собирает список из удачных последних пяти транзакций
     """
 
     count = 0
