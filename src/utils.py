@@ -20,7 +20,7 @@ def transaction_cards(card_number=None):
     :param card_number:
     """
 
-    if card_number is None:
+    if card_number is None or card_number == '':
         return 'Не указано'
     else:
         if 'Счет' not in card_number:
@@ -47,4 +47,5 @@ def get_last_five(data):
             last_five.append(data[count])
             count += 1
     return last_five
+
 

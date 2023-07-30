@@ -12,14 +12,14 @@ file_path = 'D:/skypro/account_transactions/operations.json'
 data = load_data_from_json(file_path)
 
 
-def print_result(last_five):
-    return f'{transfer_date(last_five[i]["date"])} {last_five[i]["description"]}\n' \
-           f'{transaction_cards(last_five[i].get("from"))} -> {transaction_cards(last_five[i]["to"])}\n'\
-           f'{last_five[i]["operationAmount"]["amount"]} {last_five[i]["operationAmount"]["currency"]["name"]}\n'
+def print_result(data_last_five):
+    return f'{transfer_date(data_last_five["date"])} {data_last_five["description"]}\n' \
+           f'{transaction_cards(data_last_five.get("from"))} -> {transaction_cards(data_last_five["to"])}\n'\
+           f'{data_last_five["operationAmount"]["amount"]} {data_last_five["operationAmount"]["currency"]["name"]}\n'
 
 
-last_five = get_last_five(data)
-for l in last_five:
-    print(print_result(last_five))
+data_last_five = get_last_five(data)
 
 
+for data in data_last_five:
+    print(print_result(data))
