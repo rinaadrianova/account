@@ -1,9 +1,4 @@
-import json
 from datetime import datetime
-
-
-with open('D:/skypro/account_transactions/operations.json', 'r', encoding='utf-8') as f:
-    data = json.load(f)
 
 
 def transfer_date(date):
@@ -53,13 +48,3 @@ def get_last_five(data):
             count += 1
     return last_five
 
-
-def print_result(last_five):
-    for i in range(5):
-        print(f'{transfer_date(last_five[i]["date"])} {last_five[i]["description"]}\n'
-              f'{transaction_cards(last_five[i].get("from"))} -> {transaction_cards(last_five[i]["to"])}\n'
-              f'{last_five[i]["operationAmount"]["amount"]} {last_five[i]["operationAmount"]["currency"]["name"]}\n')
-
-
-last_five = get_last_five(data)
-print_result(last_five)

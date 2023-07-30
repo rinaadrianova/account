@@ -1,4 +1,5 @@
-from src.utils import transfer_date, transaction_cards
+from src.main import data
+from src.utils import transfer_date, transaction_cards, get_last_five
 
 
 def test_transfer_date():
@@ -13,4 +14,5 @@ def test_transaction_cards():
     assert transaction_cards("Visa Classic 6831982476737658") == 'Visa Classic 6831 98** **** 7658'
 
 
-
+def test_last_five():
+    assert len(get_last_five(data)) == 5
