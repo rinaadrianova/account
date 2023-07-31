@@ -13,6 +13,7 @@ def test_transaction_cards():
     assert transaction_cards('') == 'Не указано'
     assert transaction_cards("Счет 75106830613657916952") == 'Счет **6952'
     assert transaction_cards("Visa Classic 6831982476737658") == 'Visa Classic 6831 98** **** 7658'
+    assert transaction_cards("1234567890123456") == ' 1234 56** **** 3456'
 
 
 def test_last_five():
